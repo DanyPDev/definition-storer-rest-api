@@ -15,14 +15,12 @@ app.use(bodyParser.json()); //initialize bodyParser middleware
 app.use('/words', wordsRoutes); //all wordsRoutes starts at /words
 
 
-
-//use PORT from env or if nothing use 5000
+//use PORT from .env file or if nothing use 5000
 const PORT = process.env.PORT || 5000;
 
 
-
-
 //connect to MongoDB atlas cloud server, .connect returns a promise which we can handle
+//process.env.CONNECTION_URL is the MongoDB atlas connection url
 mongoose.connect(process.env.CONNECTION_URL, {useNewUrlParser:true, useUnifiedTopology:true}) //second parameters to avoid warning messages
         .then(() => app.listen(PORT, () => console.log(`Server running on port : http://localhost:${PORT}`)))
         .catch((error) => console.log(`${error} did not connect`));
