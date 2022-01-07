@@ -4,6 +4,7 @@ import bodyParser from 'body-parser'; //for incoming post request
 import wordsRoutes from './routes/words.js';
 import mongoose from 'mongoose';
 
+/*  To run the server type npm run startServer on the terminal */
 
 const app = express(); //initializing app so that application lies in app
 dotenv.config(); //to read from .env file

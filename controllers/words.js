@@ -33,8 +33,15 @@ export const getWords =  async (req, res) => {
     }
 }
 //get a specific word
-export const getWord = (req,res) => {
-    res.send(req.params.id);    //send specific word with the associated id from request parameter
+export const getWord = async (req,res) => {
+    try{
+        const words = await WordModel.findById(req.params._id); //finding all the words in model
+
+        res.status(200).json(words);
+        
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
 }
 
 //delete a specific word
