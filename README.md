@@ -1,5 +1,7 @@
 <strong><h1>RESTful API with MongoDB Atlas Cloud Database</h1></strong>
 
+<h2>Technology used: NodeJS, Express, MongoDB</h2>
+
 <strong>Preview of API endpoints: </strong>
 
 ![enpoints](https://user-images.githubusercontent.com/96401568/148474092-3425beca-b1e6-48ec-8017-bd827a749274.png)
