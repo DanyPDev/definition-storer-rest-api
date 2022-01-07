@@ -34,9 +34,11 @@ export const getWords =  async (req, res) => {
 }
 //get a specific word
 export const getWord = async (req,res) => {
+    const { id: _id } = req.params; //return id associated to uri parameter
     try{
-        const words = await WordModel.findById(req.params._id); //finding all the words in model
-
+        //if there does not exist a word in DB, error is return, and stops searching for word
+        if(!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).json({message: 'Word does not exist'});
+        const words = await WordModel.findById(_id); //finding all the words in model
         res.status(200).json(words);
         
     } catch (error) {
@@ -47,7 +49,6 @@ export const getWord = async (req,res) => {
 //delete a specific word
 export const deleteWord = async (req,res) => {
     const { id: _id } = req.params; //return id associated to uri parameter
-    const word = req.body; //return word from update request body, will be used to patch 
 
     try{
         //if there does not exist a word in DB, error is return, and stops searching for word
