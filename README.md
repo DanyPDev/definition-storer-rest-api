@@ -2,6 +2,8 @@
 
 <h2>Technology used: NodeJS, Express, MongoDB</h2>
 
+This RESTful API can handle HTTP methods that can create,read,update and store data in a NoSQL Database
+
 <strong>Preview of API endpoints: </strong>
 
 ![enpoints](https://user-images.githubusercontent.com/96401568/148474092-3425beca-b1e6-48ec-8017-bd827a749274.png)
