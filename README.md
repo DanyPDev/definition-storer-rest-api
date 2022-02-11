@@ -2,7 +2,8 @@
 
 <h2>Technology used: NodeJS, Express, MongoDB</h2>
 
-This RESTful API can handle HTTP methods that can create,read,update and store data in a NoSQL Database
+This RESTful API can handle HTTP methods that can create,read,update and store data in a NoSQL Database. CRUD Operations were tested with Postman.
+I am planning on impleting this API on a UI.
 
 <strong>Preview of API endpoints: </strong>
 
